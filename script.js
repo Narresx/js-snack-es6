@@ -54,13 +54,13 @@ console.log(bikes);
 
 const bikesWeight = []; // array vuoto dove andrò a montare i valori del peso delle bici
 
+
 for (let i = 0; i < bikes.length; i++) { // ! Controllo nell'array di oggetti
     const bike = bikes[i]; // Creo una costante per ogni proprietà degli oggetti
 
     let { peso } = bike; // recupero il valore del peso delle bici
 
     bikesWeight.push(peso); // aggiungo elementi all'array
-
 }
 
 console.log(bikesWeight);

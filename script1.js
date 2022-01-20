@@ -34,21 +34,24 @@ const footballTeams = [    // array di squadre
 
 console.log(footballTeams);
 
-const randomNumber = Math.floor(Math.random() * 15) + 1;  // Generatore di numeri random da 1 a 15
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 const clonedTeams = [];  // array vuoto dove andrò a pushare i nuovi oggetti (oggetto con nome e falli subiti);
 
-let clonedPoints;
-let clonedIrregularitiesSuffered;
+
 
 for (let i = 0; i < footballTeams.length; i++) {
     const team = footballTeams[i];
 
+    team.points = randomNumber(1, 15);
+    team.irregularitiesSuffered = randomNumber(1, 15);
+
+
     const { points, irregularitiesSuffered, } = team; // Recupero i valori che mi servono 
 
 
+    console.log(team);
 
-    clonedTeams.push(points, irregularitiesSuffered);
-
-    console.log(clonedTeams);
 }
