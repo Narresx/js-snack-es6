@@ -48,18 +48,21 @@ const bikes = [
     },
 ];
 
-const min = 6;
-const max = 9;
 
-const newArray = [];
 
-const newArray = bikes.map((newItem, min, max) => {
+function Parziale(min, max, array) { // filter or forEach
 
+    let newArray;
     for (let i = 0; i < newArray.length; i++) {
-        if (newArray[i] >= min && newArray[i] <= max) {
-            newArray.push(newItem);
-        }
-    }
+        let newArray = array.filter((i) => {
+            if (newArray[i] >= min && newArray[i] <= max) {
+                return true;
+            }
+            return false;
+        });
+    };
+};
 
-    return newItem;
-});
+let myArray = [];
+Parziale(5, 8, myArray);
+console.log(newBikes);
