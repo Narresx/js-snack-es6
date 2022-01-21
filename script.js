@@ -52,7 +52,7 @@ const bikes = [
 
 console.log(bikes);
 
-const bikesWeight = []; // array vuoto dove andrò a montare i valori del peso delle bici
+// const bikesWeight = []; // array vuoto dove andrò a montare i valori del peso delle bici
 
 
 for (let i = 0; i < bikes.length; i++) { // ! Controllo nell'array di oggetti
@@ -60,11 +60,13 @@ for (let i = 0; i < bikes.length; i++) { // ! Controllo nell'array di oggetti
 
     let { peso } = bike; // recupero il valore del peso delle bici
 
-    bikesWeight.push(peso); // aggiungo elementi all'array
+    if (peso < bikesWeight.peso) bikesWeight = bike;
+
+    bikesWeight.push(bike); // aggiungo elementi all'array
 }
 
 console.log(bikesWeight);
 
-const theLightest = Math.min(...bikesWeight);
-console.log(theLightest); // indica il peso minore
+// const theLightest = Math.min(...bikesWeight);
+// console.log(theLightest); // indica il peso minore
 //var m = Math.min(...myArray); funzione che indica il valore minore di un array

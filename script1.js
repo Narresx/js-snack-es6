@@ -49,9 +49,10 @@ for (let i = 0; i < footballTeams.length; i++) {
     team.irregularitiesSuffered = randomNumber(1, 15);
 
 
-    const { points, irregularitiesSuffered, } = team; // Recupero i valori che mi servono 
+    const { name, irregularitiesSuffered } = team; // Recupero i valori che mi servono 
 
-
-    console.log(team);
+    clonedTeams.push({ name, irregularitiesSuffered });
 
 }
+
+console.log(clonedTeams);
